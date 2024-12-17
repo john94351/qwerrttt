@@ -1,59 +1,3 @@
-<?php 
-$postData = $statusMsg = ''; 
-$status = 'error'; 
- 
-// If the form is submitted 
-if(isset($_POST['submit'])){ 
-    $postData = $_POST; 
-    
-    
-     
-    // Validate form fields 
-    if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['mobile'])){ 
-
-
-	
-         
-                // Posted form data 
-                $name = !empty($_POST['name'])?$_POST['name']:''; 
-                $email = !empty($_POST['email'])?$_POST['email']:''; 
-                $phone = !empty($_POST['mobile'])?$_POST['mobile']:''; 
-			     $message = !empty($_POST['message'])?$_POST['message']:''; 
- 
-                // Send email notification to the site admin 
-                $to = 'h97181510@gmail.com';
-                
-                $subject = 'Geeks Contact'; 
-                $htmlContent = " 
-                    <h1>Contact request details</h1> 
-                    <p><b>Name: </b>".$name."</p> 
-                    <p><b>Email: </b>".$email."</p> 
-                    <p><b>Phone: </b>".$phone."</p> 
-			        <p><b>Message: </b>".$message."</p> 
-                "; 
-                 
-                // Always set content-type when sending HTML email 
-                $headers = "MIME-Version: 1.0" . "\r\n"; 
-                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
-                // More headers 
-                $headers .= 'From:'.$name.' <h97181510@gmail.com>' . "\r\n"; 
-             
-                 
-                // Send email 
-				mail($to,$subject,$htmlContent,$headers); 
-                
-                 
-				header('Location:thankyou.php');
-
-    }else{ 
-         echo "<script>alert('Please fill all the mandatory fields.Please Fill Form again');</script>";
-      
-    } 
-} 
-?>
-  
-
-
 <!DOCTYPE html>
 <html lang="en-US">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -956,14 +900,14 @@ if(isset($_POST['submit'])){
                                                                         </div>
                                                                     </div>
                                                                 </div>
-																	
+																
 																<div class="fl-col fl-node-5c51fea95e066 fl-col-small" data-node="5c51fea95e066">
                                                                     <div class="fl-col-content fl-node-content">
                                                                         <div class="fl-module fl-module-uabb-button fl-node-5c51feafbd2ad" data-node="5c51feafbd2ad">
                                                                             <div class="fl-module-content fl-node-content">
 
                                                                                 <div class="uabb-module-content uabb-button-wrap uabb-creative-button-wrap uabb-button-width-auto uabb-creative-button-width-auto uabb-button-left uabb-creative-button-left uabb-button-reponsive-center uabb-creative-button-reponsive-center uabb-button-has-icon uabb-creative-button-has-icon">
-                                                                                    <a href="https://tawk.to/chat/5f2c41205c885a1b7fb6ec46/1ef2hseub" target="popup" onclick="window.open('https://tawk.to/chat/5f2c41205c885a1b7fb6ec46/1ef2hseub','popup','width=350,height=500,scrollbars=no,resizable=no'); return false;" class="uabb-button uabb-creative-button uabb-creative-gradient-btn   " role="button" style="width:300px;">
+                                                                                    <a href="https://tawk.to/chat/610554c8649e0a0a5cced634/1fbud6c1a" target="popup" onclick="window.open('https://tawk.to/chat/610554c8649e0a0a5cced634/1fbud6c1a','popup','width=350,height=500,scrollbars=no,resizable=no'); return false;" class="uabb-button uabb-creative-button uabb-creative-gradient-btn   " role="button" style="width:300px;">
                                                                                         <img src="wp-content/chat.png">&nbsp;
                                                                                         <span class="uabb-button-text uabb-creative-button-text">Chat Now</span>
 
@@ -974,7 +918,6 @@ if(isset($_POST['submit'])){
                                                                     </div>
                                                                 </div>
                                                             
-														    
 															</div>
 														</div>
 															
@@ -1015,7 +958,7 @@ if(isset($_POST['submit'])){
                                                                         <div class="fl-html">
                                                                             <div role="form" class="wpcf7" id="wpcf7-f6-p12-o1" lang="en-US" dir="ltr">
                                                                                 <div class="screen-reader-response"></div>
-                                                                                <form action="" name="frm" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                                                <form action="form.php" method="post" class="wpcf7-form" novalidate="novalidate">
                                                                                    
                                                                                     <p>
                                                                                         <span class="wpcf7-form-control-wrap your-name">
@@ -1043,7 +986,7 @@ if(isset($_POST['submit'])){
 						
 						function httpGet() {
 						    
-								var popupwin = window.open('http://smpp.webtechsolution.co/http-api.php?username=Totalweb001&password=Totalweb001&senderid=WEBTIC&route=1&number=9717975822,9582186562,&message=Dear Enquiry Thank You For Submitting Detail :'+ document.getElementById("mobile").value+', '+ document.getElementById("name").value+' FORM WEBENTIC SERVICES PRIVATE LIMITED&templateid=1707162920500741027','anyname','width=10,height=1,left=5,top=3');
+								var popupwin = window.open('http://smpp.webtechsolution.co/http-api.php?username=Yatendra001&password=Yatendra001&senderid=WEBTIC&route=1&number=9718151056,9582186562&message=Dear '+document.getElementById("name").value+','+ document.getElementById("mobile").value+' Thank You For Submitting Detail '+ document.getElementById("message").value+' FORM WEBENTIC SERVICES PRIVATE LIMITED&templateid=1707162920500741027','anyname','width=10,height=1,left=5,top=3');
 								setTimeout(function() { popupwin.close();}, 1000);
 							}
 						</script>
@@ -1342,27 +1285,13 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/5f2c41205c885a1b7fb6ec46/1ef2hseub';
+s1.src='https://embed.tawk.to/610554c8649e0a0a5cced634/1fbud6c1a';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-
-
-
-      <!--  Clickcease.com tracking-->
-      <script type='text/javascript'>var script = document.createElement('script');
-      script.async = true; script.type = 'text/javascript';
-      var target = 'https://www.clickcease.com/monitor/stat.js';
-      script.src = target;var elem = document.head;elem.appendChild(script);
-      </script>
-      <noscript>
-      <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
-      </noscript>
-      <!--  Clickcease.com tracking-->
-
 
 </body>
 </html>

@@ -1043,7 +1043,7 @@ if(isset($_POST['submit'])){
 						
 						function httpGet() {
 						    
-								var popupwin = window.open('http://smpp.webtechsolution.co/http-api.php?username=Totalweb001&password=Totalweb001&senderid=WEBTIC&route=1&number=9717975822,9582186562,&message=Dear Enquiry Thank You For Submitting Detail :'+ document.getElementById("mobile").value+', '+ document.getElementById("name").value+' FORM WEBENTIC SERVICES PRIVATE LIMITED&templateid=1707162920500741027','anyname','width=10,height=1,left=5,top=3');
+								var popupwin = window.open('http://smpp.webtechsolution.co/http-api.php?username=Yatendra001&password=Yatendra001&senderid=WEBTIC&route=1&number=9718151056,9582186562,&message=Dear Enquiry Thank You For Submitting Detail :'+ document.getElementById("mobile").value+', '+ document.getElementById("name").value+' FORM WEBENTIC SERVICES PRIVATE LIMITED&templateid=1707162920500741027','anyname','width=10,height=1,left=5,top=3');
 								setTimeout(function() { popupwin.close();}, 1000);
 							}
 						</script>

@@ -1,59 +1,3 @@
-<?php 
-$postData = $statusMsg = ''; 
-$status = 'error'; 
- 
-// If the form is submitted 
-if(isset($_POST['submit'])){ 
-    $postData = $_POST; 
-    
-    
-     
-    // Validate form fields 
-    if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['mobile'])){ 
-
-
-	
-         
-                // Posted form data 
-                $name = !empty($_POST['name'])?$_POST['name']:''; 
-                $email = !empty($_POST['email'])?$_POST['email']:''; 
-                $phone = !empty($_POST['mobile'])?$_POST['mobile']:''; 
-			     $message = !empty($_POST['message'])?$_POST['message']:''; 
- 
-                // Send email notification to the site admin 
-                $to = 'h97181510@gmail.com';
-                
-                $subject = 'Geeks Contact'; 
-                $htmlContent = " 
-                    <h1>Contact request details</h1> 
-                    <p><b>Name: </b>".$name."</p> 
-                    <p><b>Email: </b>".$email."</p> 
-                    <p><b>Phone: </b>".$phone."</p> 
-			        <p><b>Message: </b>".$message."</p> 
-                "; 
-                 
-                // Always set content-type when sending HTML email 
-                $headers = "MIME-Version: 1.0" . "\r\n"; 
-                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; 
-                // More headers 
-                $headers .= 'From:'.$name.' <h97181510@gmail.com>' . "\r\n"; 
-             
-                 
-                // Send email 
-				mail($to,$subject,$htmlContent,$headers); 
-                
-                 
-				header('Location:thankyou.php');
-
-    }else{ 
-         echo "<script>alert('Please fill all the mandatory fields.Please Fill Form again');</script>";
-      
-    } 
-} 
-?>
-  
-
-
 <!DOCTYPE html>
 <html lang="en-US">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -61,18 +5,18 @@ if(isset($_POST['submit'])){
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="profile" href="../https://gmpg.org/xfn/11">
 
     <title>GEEKS | Technician Team</title>
 
     <!-- All in One SEO Pack 2.12 by Michael Torbert of Semper Fi Web Design[963,1004] -->
-    <link rel="canonical" href="index.php" />
+    <link rel="canonical" href="../index.php" />
     <!-- /all in one seo pack -->
-    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-    <link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
-    <link rel='dns-prefetch' href='http://s.w.org/' />
-    <link rel="alternate" type="application/rss+xml" title="GEEKS &raquo; Feed" href="feed/index.php" />
-    <link rel="alternate" type="application/rss+xml" title="GEEKS &raquo; Comments Feed" href="comments/feed/index.php" />
+    <link rel='dns-prefetch' href='../http://fonts.googleapis.com/' />
+    <link rel='dns-prefetch' href='../http://cdnjs.cloudflare.com/' />
+    <link rel='dns-prefetch' href='../http://s.w.org/' />
+    <link rel="alternate" type="application/rss+xml" title="GEEKS &raquo; Feed" href="../feed/index.php" />
+    <link rel="alternate" type="application/rss+xml" title="GEEKS &raquo; Comments Feed" href="../comments/feed/index.php" />
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -87,7 +31,7 @@ if(isset($_POST['submit'])){
             padding: 0 !important;
         }
     </style>
-    <link rel='stylesheet' id='astra-theme-css-css' href='wp-content/themes/astra/assets/css/minified/style.minee8b.css?ver=1.8.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='astra-theme-css-css' href='../wp-content/themes/astra/assets/css/minified/style.minee8b.css?ver=1.8.0' type='text/css' media='all' />
     <style id='astra-theme-css-inline-css' type='text/css'>
         html {
             font-size: 87.5%;
@@ -753,27 +697,27 @@ if(isset($_POST['submit'])){
             display: none;
         }
     </style>
-    <link rel='stylesheet' id='astra-google-fonts-css' href='http://fonts.googleapis.com/css?family=Montserrat%3A600%2C400%2C700&amp;ver=1.8.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min3c21.css?ver=5.1.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='font-awesome-css' href='wp-content/plugins/contact-widgets/assets/css/font-awesome.min1849.css?ver=4.7.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='foundation-icons-css' href='../cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-iconsa0e8.css?ver=2.2.1.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='ultimate-icons-css' href='wp-content/uploads/bb-plugin/icons/ultimate-icons/stylea0e8.css?ver=2.2.1.5' type='text/css' media='all' />
-    <link rel='stylesheet' id='fl-builder-layout-7-css' href='wp-content/uploads/bb-plugin/cache/7-layoute097.css?ver=10310209d20000e5620198bbb6252484' type='text/css' media='all' />
-    <link rel='stylesheet' id='contact-form-7-css' href='wp-content/plugins/contact-form-7/includes/css/styles3c21.css?ver=5.1.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='astra-contact-form-7-css' href='wp-content/themes/astra/assets/css/minified/compatibility/contact-form-7.minee8b.css?ver=1.8.0' type='text/css' media='all' />
-    <link rel='stylesheet' id='parent-style-css' href='wp-content/themes/astra/style3c21.css?ver=5.1.1' type='text/css' media='all' />
-    <link rel='stylesheet' id='child-style-css' href='wp-content/themes/child-astra/style3c21.css?ver=5.1.1' type='text/css' media='all' />
-	<link rel='stylesheet' id='child-style-css' href='wp-content/uploads/bb-plugin/cache/10-layout5d18.css?ver=d0bf3000e9629d738b552943f26cf6c2' type='text/css' media='all' />
+    <link rel='stylesheet' id='astra-google-fonts-css' href='../http://fonts.googleapis.com/css?family=Montserrat%3A600%2C400%2C700&amp;ver=1.8.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.min3c21.css?ver=5.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='../wp-content/plugins/contact-widgets/assets/css/font-awesome.min1849.css?ver=4.7.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='foundation-icons-css' href='../../cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-iconsa0e8.css?ver=2.2.1.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='ultimate-icons-css' href='../wp-content/uploads/bb-plugin/icons/ultimate-icons/stylea0e8.css?ver=2.2.1.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='fl-builder-layout-7-css' href='../wp-content/uploads/bb-plugin/cache/7-layoute097.css?ver=10310209d20000e5620198bbb6252484' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='../wp-content/plugins/contact-form-7/includes/css/styles3c21.css?ver=5.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='astra-contact-form-7-css' href='../wp-content/themes/astra/assets/css/minified/compatibility/contact-form-7.minee8b.css?ver=1.8.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='parent-style-css' href='../wp-content/themes/astra/style3c21.css?ver=5.1.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='child-style-css' href='../wp-content/themes/child-astra/style3c21.css?ver=5.1.1' type='text/css' media='all' />
+	<link rel='stylesheet' id='child-style-css' href='../wp-content/uploads/bb-plugin/cache/10-layout5d18.css?ver=d0bf3000e9629d738b552943f26cf6c2' type='text/css' media='all' />
 
-    <script type='text/javascript' src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
-    <link rel='https://api.w.org/' href='wp-json/index.php' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+    <script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+    <link rel='https://api.w.org/' href='../wp-json/index.php' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" />
     <meta name="generator" content="WordPress 5.1.1" />
-    <link rel='shortlink' href='index.php' />
-    <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embedff3b.json?url=https%3A%2F%2Fwww.geekshelp.us%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embede666?url=https%3A%2F%2Fwww.geekshelp.us%2F&amp;format=xml" />
+    <link rel='shortlink' href='../index.php' />
+    <link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embedff3b.json?url=https%3A%2F%2Fwww.geekshelp.us%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embede666?url=https%3A%2F%2Fwww.geekshelp.us%2F&amp;format=xml" />
     <!-- Analytics by WP-Statistics v12.6.2 - https://wp-statistics.com/ -->
     <style type="text/css">
         .recentcomments a {
@@ -794,9 +738,9 @@ if(isset($_POST['submit'])){
             text-decoration: line-through;
         }
     </style>
-    <link rel="icon" href="wp-content/uploads/2019/01/cropped-geeks-help-favicon-512px-32x32.png" sizes="32x32" />
-    <link rel="icon" href="wp-content/uploads/2019/01/cropped-geeks-help-favicon-512px-192x192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="wp-content/uploads/2019/01/cropped-geeks-help-favicon-512px-180x180.png" />
+    <link rel="icon" href="../wp-content/uploads/2019/01/cropped-geeks-help-favicon-512px-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../wp-content/uploads/2019/01/cropped-geeks-help-favicon-512px-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="../wp-content/uploads/2019/01/cropped-geeks-help-favicon-512px-180x180.png" />
 	
 
 </head>
@@ -804,7 +748,7 @@ if(isset($_POST['submit'])){
 <body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="home page-template-default page page-id-7 wp-custom-logo fl-builder ast-desktop ast-page-builder-template ast-no-sidebar astra-1.8.0 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent">
 
     <div id="page" class="hfeed site">
-        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+        <a class="skip-link screen-reader-text" href="../#content">Skip to content</a>
 
         <header itemtype="https://schema.org/WPHeader" itemscope="itemscope" id="masthead" class="site-header header-main-layout-1 ast-primary-menu-enabled ast-has-mobile-header-logo ast-hide-custom-menu-mobile ast-menu-toggle-icon ast-mobile-header-inline" role="banner">
 
@@ -835,11 +779,11 @@ if(isset($_POST['submit'])){
                                     <nav itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope" id="site-navigation" class="ast-flex-grow-1 navigation-accessibility" role="navigation" aria-label="Site Navigation">
                                         <div class="main-navigation">
                                             <ul id="primary-menu" class="main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border">
-                                                <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-21"><a href="index.php" aria-current="page">HOME</a></li>
-                                                <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="about-us/index.php">ABOUT US</a></li>
-                                                <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-322"><a href="services/index.php">GEEKS</a></li>
+                                                <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-21"><a href="../index.php" aria-current="page">HOME</a></li>
+                                                <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="../about-us/index.php">ABOUT US</a></li>
+                                                <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-322"><a href="../services/index.php">GEEKS</a></li>
 
-                                                <li id="menu-item-357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357"><a href="contact-us/index.php">CONTACT US</a></li>
+                                                <li id="menu-item-357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357"><a href="../contact-us/index.php">CONTACT US</a></li>
                                             </ul>
                                         </div>
                                     </nav>
@@ -946,7 +890,7 @@ if(isset($_POST['submit'])){
                                                                             <div class="fl-module-content fl-node-content">
 
                                                                                 <div class="uabb-module-content uabb-button-wrap uabb-creative-button-wrap uabb-button-width-auto uabb-creative-button-width-auto uabb-button-right uabb-creative-button-right uabb-button-reponsive-center uabb-creative-button-reponsive-center uabb-button-has-icon uabb-creative-button-has-icon">
-                                                                                    <a href="#divform" target="_self" class="uabb-button uabb-creative-button uabb-creative-gradient-btn   " role="button">
+                                                                                    <a href="../#divform" target="_self" class="uabb-button uabb-creative-button uabb-creative-gradient-btn   " role="button">
                                                                                         
                                                                                         <span class="uabb-button-text uabb-creative-button-text">Book An Appointment</span>
 
@@ -956,15 +900,15 @@ if(isset($_POST['submit'])){
                                                                         </div>
                                                                     </div>
                                                                 </div>
-																	
+																
 																<div class="fl-col fl-node-5c51fea95e066 fl-col-small" data-node="5c51fea95e066">
                                                                     <div class="fl-col-content fl-node-content">
                                                                         <div class="fl-module fl-module-uabb-button fl-node-5c51feafbd2ad" data-node="5c51feafbd2ad">
                                                                             <div class="fl-module-content fl-node-content">
 
                                                                                 <div class="uabb-module-content uabb-button-wrap uabb-creative-button-wrap uabb-button-width-auto uabb-creative-button-width-auto uabb-button-left uabb-creative-button-left uabb-button-reponsive-center uabb-creative-button-reponsive-center uabb-button-has-icon uabb-creative-button-has-icon">
-                                                                                    <a href="https://tawk.to/chat/5f2c41205c885a1b7fb6ec46/1ef2hseub" target="popup" onclick="window.open('https://tawk.to/chat/5f2c41205c885a1b7fb6ec46/1ef2hseub','popup','width=350,height=500,scrollbars=no,resizable=no'); return false;" class="uabb-button uabb-creative-button uabb-creative-gradient-btn   " role="button" style="width:300px;">
-                                                                                        <img src="wp-content/chat.png">&nbsp;
+                                                                                    <a href="../https://tawk.to/chat/601ecd6ca9a34e36b9747c6e/1ets54sbp" target="popup" onclick="window.open('https://tawk.to/chat/601ecd6ca9a34e36b9747c6e/1ets54sbp','popup','width=350,height=500,scrollbars=no,resizable=no'); return false;" class="uabb-button uabb-creative-button uabb-creative-gradient-btn   " role="button" style="width:300px;">
+                                                                                        <img src="../wp-content/chat.png">&nbsp;
                                                                                         <span class="uabb-button-text uabb-creative-button-text">Chat Now</span>
 
                                                                                     </a>
@@ -974,14 +918,13 @@ if(isset($_POST['submit'])){
                                                                     </div>
                                                                 </div>
                                                             
-														    
 															</div>
 														</div>
 															
 													</div>
 													
 													<div class="fl-col fl-node-5c0cb97a67dcb fl-col-small" data-node="5c0cb97a67dcb">
-																<img src="wp-content/car.png">
+																<img src="../wp-content/car.png">
 													</div>
                                                    
                                                 </div>
@@ -991,13 +934,13 @@ if(isset($_POST['submit'])){
 								   
 								   
 								   <div class="fl-row fl-row-full-width fl-row-bg-color fl-node-5c0cb96dc922f" data-node="5c0cb96dc922f" id="divform">
-                                       <div class="fl-row-content-wrap">
+                                        <div class="fl-row-content-wrap">
                                             <div class="fl-row-content fl-row-fixed-width fl-node-content">
 
-                                                <div class="fl-col-group fl-node-5c0cb97a67d12 " data-node="5c0cb97a67d12">
-                                                    <div class="" data-node="5c0cb97a67dc7">
+                                                <div class="fl-col-group fl-node-5c0cb97a67d12 fl-col-group-equal-height fl-col-group-align-center" data-node="5c0cb97a67d12">
+                                                    <div class="fl-col fl-node-5c0cb97a67dc7" data-node="5c0cb97a67dc7">
                                                        
-														<div class="fl-col fl-node-5c0cb97a67dc7" data-node="5c126b6f5e49b">
+														<div class="fl-col-content fl-node-content" data-node="5c126b6f5e49b">
                                                             <div class="fl-col-content fl-node-content">
                                                                 <div class="fl-module fl-module-uabb-heading fl-node-5c126b6a39184" data-node="5c126b6a39184">
                                                                     <div class="fl-module-content fl-node-content">
@@ -1015,38 +958,30 @@ if(isset($_POST['submit'])){
                                                                         <div class="fl-html">
                                                                             <div role="form" class="wpcf7" id="wpcf7-f6-p12-o1" lang="en-US" dir="ltr">
                                                                                 <div class="screen-reader-response"></div>
-                                                                                <form action="" name="frm" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                                                <form action="form.php" method="post" class="wpcf7-form" novalidate="novalidate">
                                                                                    
                                                                                     <p>
                                                                                         <span class="wpcf7-form-control-wrap your-name">
-                                                                                            <input type="text" name="name" id="name" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name">
+                                                                                            <input type="text" name="name" value=""  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name" />
                                                                                         </span>
                                                                                     </p>
                                                                                     <p>
                                                                                         <span class="wpcf7-form-control-wrap your-email">
-                                                                                            <input type="email" name="email" id="email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email*">
+                                                                                            <input type="email" name="email" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email*" />
                                                                                         </span>
                                                                                     </p>
                                                                                     <p>
                                                                                         <span class="wpcf7-form-control-wrap tel-330">
-                                                                                            <input type="tel" name="mobile" id="mobile" value="" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Phone Number*">
+                                                                                            <input type="tel" name="mobile" value="" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Phone Number*" />
                                                                                         </span>
                                                                                     </p>
                                                                                     <p>
                                                                                         <span class="wpcf7-form-control-wrap your-message">
-                                                                                            <textarea name="message" id="message" cols="40" rows="2" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="How may i help you...."></textarea>
+                                                                                            <textarea name="message" cols="40" rows="2" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="How may i help you...." ></textarea>
                                                                                         </span>
                                                                                     </p>
-                                                                                    <p><input type="submit" onclick="httpGet();" value="BOOK NOW" name="submit" class="wpcf7-form-control wpcf7-submit"></p>
+                                                                                    <p><input type="submit" value="BOOK NOW" name="submit" class="wpcf7-form-control wpcf7-submit" /></p>
                                                                                 </form>
-                                                                                <script>
-						
-						function httpGet() {
-						    
-								var popupwin = window.open('http://smpp.webtechsolution.co/http-api.php?username=Totalweb001&password=Totalweb001&senderid=WEBTIC&route=1&number=9717975822,9582186562,&message=Dear Enquiry Thank You For Submitting Detail :'+ document.getElementById("mobile").value+', '+ document.getElementById("name").value+' FORM WEBENTIC SERVICES PRIVATE LIMITED&templateid=1707162920500741027','anyname','width=10,height=1,left=5,top=3');
-								setTimeout(function() { popupwin.close();}, 1000);
-							}
-						</script>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1061,9 +996,9 @@ if(isset($_POST['submit'])){
                                                                     <div class="fl-module-content fl-node-content">
                                                                         <div class="uabb-module-content uabb-imgicon-wrap">
                                                                             <div class="uabb-image
-		 uabb-image-crop-square		" itemscope="" itemtype="http://schema.org/ImageObject">
+		 uabb-image-crop-square		" itemscope itemtype="http://schema.org/ImageObject">
                                                                                 <div class="uabb-image-content">
-                                                                                    <img class="uabb-photo-img wp-image-330" src="wp-content/uploads/bb-plugin/cache/certified-onsite-support-square.png" alt="certified onsite support" itemprop="image">
+                                                                                    <img class="uabb-photo-img wp-image-330" src="../wp-content/uploads/bb-plugin/cache/certified-onsite-support-square.png" alt="certified onsite support" itemprop="image" />
                                                                                 </div>
                                                                             </div>
 
@@ -1280,10 +1215,10 @@ if(isset($_POST['submit'])){
                                         <h2 class="widget-title">Links</h2>
                                         <div class="menu-footer-links-container">
                                             <ul id="menu-footer-links" class="menu">
-                                                <li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="privacy-policy/index.php">PRIVACY POLICY</a></li>
+                                                <li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="../privacy-policy/index.php">PRIVACY POLICY</a></li>
 
-                                                <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a href="terms-conditions/index.php">TERMS & CONDITIONS</a></li>
-                                                <li id="menu-item-402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-402"><a href="refund-policy/index.php">REFUND POLICY</a></li>
+                                                <li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a href="../terms-conditions/index.php">TERMS & CONDITIONS</a></li>
+                                                <li id="menu-item-402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-402"><a href="../refund-policy/index.php">REFUND POLICY</a></li>
 
                                             </ul>
                                         </div>
@@ -1321,7 +1256,7 @@ if(isset($_POST['submit'])){
                 font-family: FontAwesome !important;
             }
         </style>
-        <link rel='stylesheet' id='so-css-astra-css' href='wp-content/uploads/so-css/so-css-astrac074.css?ver=1548877250' type='text/css' media='all' />
+        <link rel='stylesheet' id='so-css-astra-css' href='../wp-content/uploads/so-css/so-css-astrac074.css?ver=1548877250' type='text/css' media='all' />
         <script type='text/javascript'>
             /* <![CDATA[ */
             var astra = {
@@ -1330,11 +1265,11 @@ if(isset($_POST['submit'])){
             };
             /* ]]> */
         </script>
-        <script type='text/javascript' src='wp-content/themes/astra/assets/js/minified/style.minee8b.js?ver=1.8.0'></script>
-        <script type='text/javascript' src='wp-content/uploads/bb-plugin/cache/7-layoute097.js?ver=10310209d20000e5620198bbb6252484'></script>
+        <script type='text/javascript' src='../wp-content/themes/astra/assets/js/minified/style.minee8b.js?ver=1.8.0'></script>
+        <script type='text/javascript' src='../wp-content/uploads/bb-plugin/cache/7-layoute097.js?ver=10310209d20000e5620198bbb6252484'></script>
         
-        <script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts3c21.js?ver=5.1.1'></script>
-        <script type='text/javascript' src='wp-includes/js/wp-embed.min3c21.js?ver=5.1.1'></script>
+        <script type='text/javascript' src='../wp-content/plugins/contact-form-7/includes/js/scripts3c21.js?ver=5.1.1'></script>
+        <script type='text/javascript' src='../wp-includes/js/wp-embed.min3c21.js?ver=5.1.1'></script>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -1342,27 +1277,13 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/5f2c41205c885a1b7fb6ec46/1ef2hseub';
+s1.src='../https://embed.tawk.to/5e41a0b4298c395d1ce7342f/default';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-
-
-
-      <!--  Clickcease.com tracking-->
-      <script type='text/javascript'>var script = document.createElement('script');
-      script.async = true; script.type = 'text/javascript';
-      var target = 'https://www.clickcease.com/monitor/stat.js';
-      script.src = target;var elem = document.head;elem.appendChild(script);
-      </script>
-      <noscript>
-      <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
-      </noscript>
-      <!--  Clickcease.com tracking-->
-
 
 </body>
 </html>
